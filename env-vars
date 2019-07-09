@@ -1,0 +1,15 @@
+export TF_VAR_tenancy_ocid="ocid1.tenancy.oc1..aaaaaaaajd45ccu2jquva62syjosjah3vs5kuawqogx2hqih45timjxcc3ga"
+export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaambji2snqmmgr3lw6let4zaedylixfj75jd7yva4oqqqcz7nwq35q"
+export TF_VAR_fingerprint="a5:2e:2f:5c:c7:fe:b5:4a:a9:31:43:62:c1:45:75:45"
+export TF_VAR_private_key_path="/Users/ravvitta/.oci/oci_api_key.pem"
+export TF_VAR_region="us-ashburn-1"
+export TF_VAR_AD="ad-2"
+export TF_VAR_NumInstances=1
+export TF_VAR_instance_shape="VM.Standard2.24"
+export TF_VAR_compartment_ocid="ocid1.compartment.oc1..aaaaaaaavxvovbiv4r5a4j3dwnn6ly3eyoc7hlyj6lkbovsiphd4s2ninmkq"
+export TF_VAR_instance_image_ocid="ocid1.image.oc1.iad.aaaaaaaaqnzsgpjxwh32qw3ut4khtcyhxnjryrrqxwuopnejroreozclddya"
+export TF_VAR_ssh_public_key=$(cat /Users/ravvitta/.ssh/id_rsa.pub)
+export TF_VAR_ssh_private_key=$(cat /Users/ravvitta/.ssh/id_rsa)
+
+####export TF_VAR_instance_shape="VM.Standard.E2.8"
+#####export TF_VAR_instance_image_ocid="ocid1.image.oc1.iad.aaaaaaaageeenzyuxgia726xur4ztaoxbxyjlxogdhreu3ngfj2gji3bayda" -- OEL 7.4
