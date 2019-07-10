@@ -1,34 +1,3 @@
-variable "tenancy_ocid" {
-}
-
-variable "user_ocid" {
-}
-
-variable "fingerprint" {
-}
-
-variable "private_key_path" {
-}
-
-variable "compartment_ocid" {
-}
-
-variable "NumInstances" {
-}
-
-variable "instance_shape" {
-}
-
-variable "instance_image_ocid" {
-}
-
-variable "ssh_public_key" {
-}
-
-variable "region" {
-  default = "us-ashburn-1"
-}
-
 variable "cluster_options_add_ons_is_kubernetes_dashboard_enabled" {
   default = true
 }
@@ -37,12 +6,8 @@ variable "cluster_options_add_ons_is_tiller_enabled" {
   default = true
 }
 
-variable "cluster_options_kubernetes_network_config_pods_cidr" {
-  default = "100.100.21.0/16"
-}
-
-variable "cluster_options_kubernetes_network_config_services_cidr" {
-  default = "100.100.22.0/16"
+variable "availability_domain" {
+  default = 3
 }
 
 variable "node_pool_initial_node_labels_key" {
