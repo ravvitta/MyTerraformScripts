@@ -11,12 +11,10 @@ data "oci_core_services" "test_services" {
   }
 }
 
-#data "oci_core_instance" "PerfInstanceDS" {
-#    #Required
-#instance_id = "${var.oci_core_instance.PerfInstance0.id}"
-#    instance_id = "ocid1.instance.oc1.iad.abuwcljtfqi2hrkdqjwoslk7fgcrmygwwc3x4nhz2gxibvrb7yeup32mm73q"
-#}
-#data "oci_core_volume" "TFBlock" {
-#    #Required
-#    volume_id = "ocid1.volume.oc1.iad.abuwcljtfb2iddufyghw5eu5zquvvixtjovf6fi3vk6pbl2522jstebv3o4q"
-#}
+data "oci_containerengine_cluster_option" "test_cluster_option" {
+  cluster_option_id = "all"
+}
+
+data "oci_containerengine_node_pool_option" "test_node_pool_option" {
+  node_pool_option_id = "all"
+}
