@@ -1,3 +1,14 @@
+variable "tenancy_ocid" {}
+variable "user_ocid" {}
+variable "fingerprint" {}
+variable "private_key_path" {}
+variable "compartment_ocid" {}
+variable "ssh_public_key" {}
+
+variable "region" {
+  default = "us-ashburn-1"
+}
+
 variable "cluster_options_add_ons_is_kubernetes_dashboard_enabled" {
   default = true
 }
