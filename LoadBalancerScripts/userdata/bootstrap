@@ -1,0 +1,23 @@
+#!/bin/bash -x
+sudo yum install fio -y
+sudo yum install nginx -y
+sudo systemctl enable nginx
+sudo systemctl start nginx
+sudo hostname >> /usr/share/nginx/html/index.html
+sudo cat /etc/os-release >> /usr/share/nginx/html/index.html
+
+default = <<EOF
+#!/bin/bash -x
+echo '################### webserver userdata begins #####################'
+touch ~opc/userdata.`date +%s`.start
+
+echo '########## basic webserver ##############'
+firewall-cmd --permanent --zone=public --add-service=http
+firewall-cmd --reload
+systemctl enable firewalld
+systemctl restart firewalld
+hostname >> /usr/share/nginx/html/index.html
+
+touch ~opc/userdata.`date +%s`.finish
+echo '################### webserver userdata ends #######################'
+EOF
