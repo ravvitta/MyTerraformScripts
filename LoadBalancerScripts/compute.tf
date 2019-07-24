@@ -113,3 +113,21 @@ resource "oci_core_instance" "LBTest" {
     source_id   = "${var.instance_image_ocid}"
   }
 }
+
+
+resource  "null_resource" "firewalld" {
+   count               = var.NumInstances
+   connection {
+    type        = "ssh"
+    host        = "${oci_core_instance.LBTest[count.index].public_ip}"
+    user        = "opc"
+    private_key = "${file("~/.ssh/id_rsa")}"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo firewall-cmd --permanent --zone=public --add-service=http",
+      "sudo firewall-cmd --reload",
+    ]
+  }
+}
